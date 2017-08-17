@@ -1,4 +1,4 @@
-# Android Project From 0
+# Android社会化平台授权及分享组件
 
 Repository to show the best practice from the series blog Android-Project-From-0.
 
