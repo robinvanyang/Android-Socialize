@@ -3,7 +3,7 @@
 目前支持微信 微博 QQ三个平台
 
 # How to use(基于android studio):
-##配置
+## 配置
 1. 将libsocialize module集成到你的项目中
 2. 配置主module的清单文件，加入如下代码:
 ```
@@ -52,7 +52,8 @@ SocialShare.getInstance()
         .enableWeChatMoment(this)
         .enableWeiBo();
 ```
-##授权
+
+## 授权
 
 1. 授权回调:
 授权回调的逻辑集成在BaseAuthActivity类中，所以需要继承BaseAuthActivity, 在子类中处理授权回调，如和服务器交互，弹出toast等等。 但是在很多场景中，activity本身已有特定的父类，推荐的办法是：拷贝BaseAuthAcitivty到主module中，并将其父类修改成你需要的activity父类.
@@ -62,7 +63,7 @@ SocialShare.getInstance()
 SocialAuth.getAuth(AuthType.WECHAT).authorize(activity, authCallback)
 ```
 
-##分享
+## 分享
 分享功能所在的acitivity须继承BaseShareActivity, 不过就实际的项目，基本需要将此类拷贝一份，再将此类的父类更改为你自定义的类。
 
 分享信息包装在ShareInfo类中， 调用SocialShare类的showShareDialog方法，显示分享对话框，目前分享对话框显示在UI底部。
