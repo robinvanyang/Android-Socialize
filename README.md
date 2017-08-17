@@ -59,19 +59,18 @@ SocialShare.getInstance()
 
 2. 使用授权功能 eg:
 ``` java
-AuthService.getAuth(AuthType.WECHAT).authorize(activity, authCallback)
+SocialAuth.getAuth(AuthType.WECHAT).authorize(activity, authCallback)
 ```
 
 ##分享
-
-1. 分享回调:
-在调用
+分享功能所在的acitivity须继承BaseShareActivity, 不过就实际的项目，基本需要将此类拷贝一份，再将此类的父类更改为你自定义的类。
 
 分享信息包装在ShareInfo类中， 调用SocialShare类的showShareDialog方法，显示分享对话框，目前分享对话框显示在UI底部。
-eg: 
+使用: 
 SocialShare.getInstance().showShareDialog(getSupportFragmentManager(), shareInfo, sharecallback);
 
-# Donation
+# 捐赠
+此项目fork自markzhai的开源项目，深受启发，所以如果觉得此项目对您有用，请使用下面的二维码给他捐赠。
 
 If you find this repository helpful, you may make a donation to me via alipay or wechat.
 ![alipay](http://blog.zhaiyifan.cn/images/donation-alipay.png "alipay") ![wechat](http://blog.zhaiyifan.cn/images/donation.jpg "wechat")
