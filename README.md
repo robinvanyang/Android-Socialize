@@ -2,8 +2,8 @@
 
 目前支持微信 微博 QQ三个平台
 
-# How to use(基于android studio):
-## 配置
+## How to use(基于android studio):
+### 配置
 1. 将libsocialize module集成到你的项目中
 2. 配置主module的清单文件，加入如下代码:
 ```
